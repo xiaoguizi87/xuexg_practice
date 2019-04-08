@@ -8,7 +8,6 @@ var search = function(nums, target) {
     let high = nums.length - 1;
     while (low <= high) {
         let mid = parseInt((low + high) / 2);
-        console.log(mid)
         if (nums[mid] == target) {
             return mid;
         } else if (nums[mid] < target) {
