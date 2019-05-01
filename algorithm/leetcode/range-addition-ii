@@ -1,0 +1,15 @@
+/**
+ * @param {number} m
+ * @param {number} n
+ * @param {number[][]} ops
+ * @return {number}
+ */
+var maxCount = function(m, n, ops) {
+    let mm = m
+    let mn = n
+    for (let [x, y] of ops) {
+        mm = Math.min(mm, x)
+        mn = Math.min(mn, y)
+    }
+    return mm * mn
+};
