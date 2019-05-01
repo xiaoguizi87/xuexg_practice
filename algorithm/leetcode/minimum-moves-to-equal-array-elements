@@ -1,0 +1,4 @@
+var minMoves = function(nums) {
+    let m = Math.min(...nums)
+    return nums.reduce((x, y) => x + y - m, 0)
+};
