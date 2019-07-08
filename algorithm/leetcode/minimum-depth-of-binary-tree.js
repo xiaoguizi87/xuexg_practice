@@ -10,8 +10,16 @@
  * @return {number}
  */
 var minDepth = function(root) {
-        if (root == null) {
-            return 0
-        }
-        return Math.min(minDepth(root.left), minDepth(root.right)) + 1    
+    if (root === null) {
+        return 0
+    }
+    let left = minDepth(root.left)
+    let  right = minDepth(root.right)
+    if (left === 0) {
+        return right + 1
+    }
+    if (right === 0) {
+        return left + 1
+    }
+    return Math.min(left, right) + 1
 };
